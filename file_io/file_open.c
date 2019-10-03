@@ -8,7 +8,7 @@ int main()
 {
 
 	int fd;
-	const char * file_name = "./sample.txt";
+	const char * file_name = "./sample_open.txt";
 
 	fd = open (file_name, O_RDONLY);
 
