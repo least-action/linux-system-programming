@@ -6,3 +6,6 @@
 
 # text file
 *.txt
+
+# test file
+*test*
