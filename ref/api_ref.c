@@ -22,9 +22,12 @@ ssize_t write (int fd, const void *buf, size_t count);
 /* ---------------------------------------------------------------------- */
 #include <unistd.h>
 
-int fsync (int fd);      // sync data + metadata
-int fdatasync (int fd);  // sync only data
+int fsync (int fd);         // sync data + metadata
+int fdatasync (int fd);     // sync only data
 /* ---------------------------------------------------------------------- */
+#include <unistd.h>
+
+void sync (void);           // always succeed
 /* ---------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------- */
