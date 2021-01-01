@@ -31,7 +31,18 @@ int main() {
 	ret = lseek (fd, (off_t) 1688, SEEK_END);
 	if (ret == (off_t) -1)
 		puts("lseek error");
+    printf("pos: %d\n", ret);
 
+    // read
+	unsigned long word;
+	ssize_t nr;
+
+	nr = read (fd, &word, sizeof (unsigned long));
+	if (nr == -1)
+		puts("read error");
+	else
+		printf("%lu\n", word);
+	
 
 	// close
 	if (close(fd) == -1) {
