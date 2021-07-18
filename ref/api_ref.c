@@ -3,6 +3,14 @@
 
 void perror (const char *str);
 /* ---------------------------------------------------------------------- */
+#include <string.h>
+
+char * strerror (int errnum);
+/* ---------------------------------------------------------------------- */
+#include <string.h>
+
+int strerror_r (int errnum, char *buf, size_t len);
+/* ---------------------------------------------------------------------- */
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
